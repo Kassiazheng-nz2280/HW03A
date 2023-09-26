@@ -1,24 +1,35 @@
-let cDiam1 = 30;
-let cDiam2 = 5;
-
+let cDiam = 25;
+let num = 0
 let xOffset = 50;
 let xSpacing = 50;
 
 let yOffset = 50;
 let ySpacing = 50;
 
-function setup() {
-}
 
+
+function setup() {
+    createCanvas(windowWidth, windowHeight);
+}
 
 function draw() {
-  background(238, 219, 3);
+  background(234, 215, 0);
+  
 
-  for (let xPos = xOffset; xPos <= width - xOffset; xPos += xSpacing) {
-    for (let yPos = yOffset; yPos <= height - yOffset; yPos += ySpacing) {
-      ellipse(xPos, yPos, cDiam2 + xPos / 17);
-      ellipse(xPos, yPos, cDiam1 + xPos / 33);
-      fill(20);
+  for (let xPos = 0; xPos <= width ; xPos += xSpacing) {
+    for (let yPos = 0; yPos <= height ; yPos += ySpacing) {
+    if (xPos =xOffset + num * xSpacing){
+
+      ellipse(xPos, yPos, 100,100)}
+
+      else  {
+        ellipse(xPos, yPos, 50,50)}
+        
+    
+       
+      fill(0);
     }
+    num++;
   }
 }
+
